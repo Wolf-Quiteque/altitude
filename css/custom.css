@@ -47,13 +47,13 @@
 /************************************/
 
 :root{
-	--primary-color				: #1A1A1A;
+	--primary-color				: #063B5C;
 	--secondary-color			: #FFFFFF;
-	--bg-color					: #F2F3EE;
-	--text-color				: #454544;
-	--accent-color				: #9C9C55;
+	--bg-color					: #F4FAFF;
+	--text-color				: #28445A;
+	--accent-color				: #0A8FE3;
 	--white-color				: #FFFFFF;
-	--divider-color				: #1A1A1A1A;
+	--divider-color				: #063B5C1A;
 	--dark-divider-color		: #FFFFFF1A;
 	--error-color				: rgb(230, 87, 87);
 	--default-font				: "Inter Tight", sans-serif;
@@ -515,7 +515,7 @@ header.main-header{
 	top: 15px;
 	left: 15px;
 	right: 15px;
-	border-bottom: 1px solid var(--dark-divider-color);
+	border-bottom: none;
 	z-index: 100;
 }
 
@@ -523,6 +523,12 @@ header.main-header .header-sticky{
 	position: relative;
 	top: 0;
 	z-index: 100;
+	background: rgba(255, 255, 255, 0.96);
+	border: 1px solid var(--divider-color);
+	border-radius: 16px;
+	box-shadow: 0 14px 40px rgba(6, 59, 92, 0.12);
+	backdrop-filter: blur(16px);
+	-webkit-backdrop-filter: blur(16px);
 }
 
 header.main-header .header-sticky.hide{
@@ -536,19 +542,27 @@ header.main-header .header-sticky.active{
 	left: 15px;
 	right: 15px;
     transform: translateY(0);
-	background: var(--primary-color);
-	border-bottom: 1px solid var(--dark-divider-color);
-	border-radius: 0 0 20px 20px;
+	background: rgba(255, 255, 255, 0.98);
+	border: 1px solid var(--divider-color);
+	border-top: 0;
+	border-radius: 0 0 16px 16px;
 }
 
 .navbar{
-	padding: 30px 0;
+	padding: 14px 0;
 	align-items: center;
 }
 
 .navbar-brand{
 	padding: 0;
 	margin: 0;
+}
+
+.navbar-brand img{
+	max-height: 72px;
+	width: auto;
+	height: auto;
+	display: block;
 }
 
 .main-menu .nav-menu-wrapper{
@@ -572,7 +586,7 @@ header.main-header .header-sticky.active{
 	font-weight: 600;
 	line-height: 1.2em;
 	padding: 12px 10px !important;
-	color: var(--white-color);
+	color: var(--primary-color);
 	background: transparent;
 	border-radius: 0px;
 	text-transform: capitalize;
@@ -711,7 +725,10 @@ header.main-header .header-sticky.active{
 	position: absolute;
     width: 100%;
 	padding: 0;
-	background: var(--accent-color);
+	background: var(--white-color);
+	border: 1px solid var(--divider-color);
+	border-radius: 0 0 16px 16px;
+	box-shadow: 0 18px 40px rgba(6, 59, 92, 0.12);
 }
 
 .slicknav_menu ul{
@@ -729,7 +746,7 @@ header.main-header .header-sticky.active{
 	font-weight: 600;
 	text-transform: capitalize;
 	padding: 7px 20px;
-	color: var(--white-color);
+	color: var(--primary-color);
 	line-height: normal;
 	margin: 0;
 	border-radius: 0 !important;
@@ -740,7 +757,7 @@ header.main-header .header-sticky.active{
 .slicknav_nav a:focus,
 .slicknav_nav .slicknav_row:hover{
 	background-color: transparent;
-	color: var(--primary-color);
+	color: var(--accent-color);
 }
 
 .slicknav_menu ul ul li a{
@@ -758,7 +775,7 @@ header.main-header .header-sticky.active{
 	font-weight: 900;
 	font-size: 12px;
 	margin-left: 8px;
-	color: var(--white-color);
+	color: var(--primary-color);
 	right: 15px;
 	top: 50%;
 	transform: translateY(-50%);
@@ -7171,7 +7188,12 @@ header.main-header .header-sticky.active{
 
 .footer-logo-moon img{
 	width: 100%;
-	max-width: 133px;
+	max-width: 220px;
+}
+
+.footer-newsletter-form-moon p{
+	color: var(--white-color);
+	margin-bottom: 10px;
 }
 
 .footer-contact-box-moon{
